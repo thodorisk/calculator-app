@@ -1,41 +1,47 @@
 <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="./calc.css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apple Calculator</title>
+        <link rel="stylesheet" type="text/css" href="./calc.css" />
     </head>
     <body>
         <div class="calc-wrapper">
-        <div class="row">
-            <div class="input">0</div>
+            <div class="row">
+                <div class="input-wrapper">
+                    <input dir="rtl" type="number" id="calc" disabled placeholder="0">
+                </div>
+            </div>
+            <div class="row">
+                <button class="box">C</button>
+                <button class="box">+/-</button>
+                <button class="box">%</button>
+                <button class="box">÷</button>
+            </div>
+            <div class="row">
+                <button class="box number">7</button>
+                <button class="box number">8</button>
+                <button class="box number">9</button>
+                <button class="box">x</button>
+            </div>
+            <div class="row">
+                <button class="box number">4</button>
+                <button class="box number">5</button>
+                <button class="box number">6</button>
+                <button class="box">-</button>
+            </div>
+            <div class="row">
+                <button class="box number">1</button>
+                <button class="box number">2</button>
+                <button class="box number">3</button>
+                <button class="box">+</button>
+            </div>
+            <div class="row">
+                <button class="box number">0</button>
+                <button class="box">.</button>
+                <button class="box">=</button>
+            </div>
         </div>
-        <div class="row">
-            <div class="box">C</div>
-            <div class="box">+/-</div>
-            <div class="box">%</div>
-            <div class="box">÷</div>
-        </div>
-        <div class="row">
-            <div class="box">7</div>
-            <div class="box">8</div>
-            <div class="box">9</div>
-            <div class="box">x</div>
-        </div>
-        <div class="row">
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-            <div class="box">-</div>
-        </div>
-        <div class="row">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">+</div>
-        </div>
-        <div class="row">
-            <div class="box">0</div>
-            <div class="box">.</div>
-            <div class="box">=</div>
-        </div>
-        </div>
+        <script src="calc.js"></script>
     </body>
 </html>
