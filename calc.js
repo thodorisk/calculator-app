@@ -1,4 +1,13 @@
+import { Observable } from "rxjs/Rx";
+
 let result = 0, operation = "", isSecondPart = false;
+
+const btns = document.getElementsByClassName('box');
+
+const btns$ = Observable.from(btns)
+    .map(btn => Observable.fromEvent(btn, 'click')
+    .mapTo(btn.textContent))
+    .mergeAll();
 
 let storeResult = function() {
     let v = parseFloat(document.getElementById('calc').value);
@@ -17,7 +26,7 @@ let storeResult = function() {
     document.getElementById('calc').value = result;
 };
 
-var processKey = function(key) {
+btns$.subscribe(key => {
     if (/\d/.test(key) || key === '.') {
         if (isSecondPart) {
             document.getElementById('calc').value = key;
@@ -33,12 +42,4 @@ var processKey = function(key) {
         operation = key;
         isSecondPart = true;
     }
-};
-
-let btnArray = document.getElementsByClassName('box');
-
-[].forEach.call(btnArray, function (btn) {
-    btn.onclick = function() {
-      processKey(btn.textContent);
-    };
 });
