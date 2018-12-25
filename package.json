@@ -14,8 +14,6 @@
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.4",
     "rxjs-compat": "^6.3.3",
-    "ts-loader": "^5.3.2",
-    "typescript": "^3.2.2",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
